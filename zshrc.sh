@@ -10,7 +10,11 @@ alias clang="clang -Wall -g"
 alias clang++="clang++ -Wall -g -std=c++11"
 
 open_in_gui(){
-    xdg-open "$1" &> /dev/null
+    if [[ `uname` == 'Linux' ]]; then
+        xdg-open "$1" &> /dev/null
+    elif [[ `uname` == 'Darwin' ]]; then
+        open "$1"
+    fi
 }
 
 alias e="open_in_gui"
@@ -58,3 +62,6 @@ alias digs="dig +short"
 alias sau="sudo apt update"
 alias sai="sudo apt install"
 alias saf="sudo apt full-upgrade"
+
+alias inprivate="fc -p /dev/null; PS1=$'\n''PRIVATE ${PS1:1}'"
+

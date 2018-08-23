@@ -1,6 +1,21 @@
 export TERM="xterm-256color"
 ZSH_THEME="ys"
-plugins=(git colored-man-pages extract colorize cp dircycle pip github gitignore zsh-autosuggestions zsh-completions zsh-syntax-highlighting )
+plugins=(
+    git
+    colored-man-pages
+    extract
+    colorize
+    cp
+    dircycle
+    pip
+    github
+    gitignore
+    docker
+    zsh-autosuggestions
+    zsh-completions
+    zsh-syntax-highlighting
+    history-substring-search
+)
 setopt histignorespace # command starts with space doesn't appear in history
 export EDITOR=vim
 

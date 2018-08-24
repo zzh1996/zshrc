@@ -78,5 +78,5 @@ alias sau="sudo apt update"
 alias sai="sudo apt install"
 alias saf="sudo apt full-upgrade"
 
-alias inprivate="fc -p /dev/null; PS1=$'\n''PRIVATE ${PS1:1}'"
+alias inprivate='fc -p /dev/null; PS1="${PS1:0:1}PRIVATE ${PS1:1}"'
 

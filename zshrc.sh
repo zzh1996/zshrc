@@ -36,9 +36,9 @@ alias e="open_in_gui"
 alias v="vim"
 alias s="subl" # sublime
 alias p="python3"
-alias p2="python"
+alias p2="python2"
 alias i="ipython3"
-alias i2="ipython"
+alias i2="ipython2"
 alias a="du -a -d 1 -h --time | sort -h"
 
 compile_c(){

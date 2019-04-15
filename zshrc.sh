@@ -65,7 +65,7 @@ grep_r(){
 }
 
 alias f="grep_r"
-alias myip="curl ip.cn;curl myip.ustclug.org"
+alias myip="curl https://ip.cn; curl https://myip.ustclug.org"
 
 ipip_query(){
     curl http://freeapi.ipip.net/$1

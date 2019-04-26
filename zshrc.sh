@@ -61,7 +61,7 @@ compile_c_run(){
 alias cr="compile_c_run"
 
 grep_r(){
-    grep "$*" . -R 
+    grep -R -i -n -I --color=always --exclude-dir=.git "$*" .
 }
 
 alias f="grep_r"

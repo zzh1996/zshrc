@@ -26,9 +26,17 @@ alias clang++="clang++ -Wall -g -std=c++11"
 
 open_in_gui(){
     if [[ `uname` == 'Linux' ]]; then
-        xdg-open "$1" &> /dev/null
+        if grep -q Microsoft /proc/version; then
+            /mnt/c/Windows/explorer.exe "$1"
+        elif grep -q Android /proc/version; then
+            termux-open "$1"
+        else
+            xdg-open "$1" &> /dev/null
+        fi
     elif [[ `uname` == 'Darwin' ]]; then
         open "$1"
+    else
+        echo Unknown platform
     fi
 }
 

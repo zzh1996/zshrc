@@ -88,4 +88,4 @@ alias saf="sudo apt full-upgrade"
 
 alias inprivate='fc -p /dev/null; PS1="${PS1:0:1}PRIVATE ${PS1:1}"'
 
-alias diff="git diff --no-index"
+alias gdiff="git diff --no-index"

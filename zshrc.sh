@@ -89,3 +89,9 @@ alias saf="sudo apt full-upgrade"
 alias inprivate='fc -p /dev/null; PS1="${PS1:0:1}PRIVATE ${PS1:1}"'
 
 alias gdiff="git diff --no-index"
+
+export HISTSIZE=10000000
+export SAVEHIST=10000000
+setopt HIST_FIND_NO_DUPS
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY

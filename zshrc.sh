@@ -15,6 +15,9 @@ plugins=(
     zsh-completions
     zsh-syntax-highlighting
     history-substring-search
+    command-not-found
+    python
+    sudo
 )
 setopt histignorespace # command starts with space doesn't appear in history
 export EDITOR=vim
@@ -69,7 +72,7 @@ compile_c_run(){
 alias cr="compile_c_run"
 
 grep_r(){
-    grep -R -i -n -I --color=always --exclude-dir=.git "$*" .
+    grep -R -i -n -a -E --color=never --exclude-dir=.git --line-buffered -o "(.{0,30})($*)(.{0,30})" . | grep --color=always --line-buffered -i -a -E "$*"
 }
 
 alias f="grep_r"
